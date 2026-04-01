@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div>
+        <h3>Job Portal</h3>
+    </div>
+    <div>
+    {% if session.get('user_id') %}
+        <span>Welcome, {{ session.get('name') }}</span>
+        <a href="/dashboard">Dashboard</a>
+
+        {% if session.get('role') in ['admin','employer'] %}
+            <a href="/add_job">Add Job</a>
+        {% endif %}
+
+        <a href="/logout">Logout</a>
+    {% else %}
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    {% endif %}
+</div>
+</div>
+
+<div class="container">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    color: #333;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background-color: #1f2937;
+    color: white;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h3 {
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 85%;
+    margin: 40px auto;
+}
+
+/* ================= FORMS ================= */
+
+form {
+    background: white;
+    padding: 25px;
+    width: 380px;
+    margin: auto;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border-radius: 12px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* ================= BUTTON ================= */
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+/* ================= FLASH MESSAGE ================= */
+
+.flash {
+    background: #22c55e;
+    color: white;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* ================= JOB GRID ================= */
+
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* ================= JOB CARD ================= */
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* ================= BUTTON GROUP ================= */
+
+.btn-group {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 8px 14px;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+/* Button Colors */
+
+.apply {
+    background-color: #16a34a;
+}
+
+.edit {
+    background-color: #f59e0b;
+}
+
+.delete {
+    background-color: #dc2626;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+}
